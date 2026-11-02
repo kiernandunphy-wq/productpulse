@@ -1,0 +1,71 @@
+// Create each named expression as a separate measure in Power BI Desktop.
+// Table names must match desktop_setup.md. This text has not run in the DAX engine.
+
+Total Events =
+IF(NOT ISCROSSFILTERED(DimDevice[device_category]), SUM(DailyKpis[event_count]))
+
+Unique Active Users =
+IF(NOT ISCROSSFILTERED(DimDevice[device_category]), DISTINCTCOUNT(UserActivity[user_key]))
+
+Eligible Active Sessions =
+IF(NOT ISCROSSFILTERED(DimDevice[device_category]), DISTINCTCOUNT(SessionActivity[session_key]))
+
+Entry Cohort Sessions = COUNTROWS(CohortSessions)
+
+Product View Sessions = SUM(CohortSessions[view_item])
+
+Cart Sessions = SUM(CohortSessions[add_to_cart])
+
+Checkout Sessions = SUM(CohortSessions[begin_checkout])
+
+Ordered Purchase Sessions = SUM(CohortSessions[purchase])
+
+Product View to Purchase Conversion = DIVIDE([Ordered Purchase Sessions], [Product View Sessions])
+
+Stage Sessions =
+SWITCH(SELECTEDVALUE(DimStage[stage_order]),
+    1, [Product View Sessions],
+    2, [Cart Sessions],
+    3, [Checkout Sessions],
+    4, [Ordered Purchase Sessions],
+    BLANK())
+
+Previous Stage Sessions =
+SWITCH(SELECTEDVALUE(DimStage[stage_order]),
+    2, [Product View Sessions],
+    3, [Cart Sessions],
+    4, [Checkout Sessions],
+    BLANK())
+
+Stage Conversion from Product View = DIVIDE([Stage Sessions], [Product View Sessions])
+
+Step Conversion = DIVIDE([Stage Sessions], [Previous Stage Sessions])
+
+Abandoned Sessions =
+IF(NOT ISBLANK([Previous Stage Sessions]), [Previous Stage Sessions] - [Stage Sessions])
+
+Step Abandonment =
+IF(NOT ISBLANK([Step Conversion]), 1 - [Step Conversion])
+
+Potentially Incomplete Cohort Sessions =
+CALCULATE(COUNTROWS(CohortSessions), KEEPFILTERS(CohortSessions[potentially_incomplete] = TRUE()))
+
+Missing Attribution Events =
+IF(HASONEVALUE(Attribution[attribution_field]) && NOT ISCROSSFILTERED(DimDevice[device_category]),
+    SUM(Attribution[missing_events]))
+
+Attribution Event Denominator =
+IF(HASONEVALUE(Attribution[attribution_field]) && NOT ISCROSSFILTERED(DimDevice[device_category]),
+    SUM(Attribution[event_denominator]))
+
+Attribution Missing Rate = DIVIDE([Missing Attribution Events], [Attribution Event Denominator])
+
+Attribution Available Events =
+IF(NOT ISBLANK([Attribution Event Denominator]),
+    [Attribution Event Denominator] - [Missing Attribution Events])
+
+Attribution Completeness Rate = DIVIDE([Attribution Available Events], [Attribution Event Denominator])
+
+// Device selection only applies to cohort measures. These guards also prevent
+// window activity cards from silently claiming to respond to unsupported filters.
+// Do not add filters on hidden bridge keys or audit tables to report pages.

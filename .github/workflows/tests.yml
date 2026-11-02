@@ -1,0 +1,14 @@
+name: Python analytics checks
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e ".[dev,bigquery]"
+      - run: python -m ruff check src tests scripts databricks
+      - run: python -m pytest -q
+      - run: python -m productpulse.foundation --input data/fixtures/foundation_events.csv --label fixture --output data/processed/ci_foundation

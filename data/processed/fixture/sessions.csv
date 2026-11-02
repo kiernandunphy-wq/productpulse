@@ -1,0 +1,5 @@
+user_pseudo_id,ga_session_id,session_date,source,medium,device_category,events,page_view,view_item,add_to_cart,purchase,any_purchase
+u1,1,2020-11-01,google,organic,desktop,4,1,1,1,1,1
+u1,3,2020-12-01,google,organic,desktop,4,1,1,1,1,1
+u2,1,2020-11-01,direct,none,mobile,2,1,1,0,0,0
+u3,2,2020-11-01,google,organic,mobile,4,1,1,0,0,1

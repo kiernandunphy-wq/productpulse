@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "productpulse"
+version = "0.1.0"
+description = "Reproducible GA4 ecommerce analytics and simulated experimentation"
+requires-python = ">=3.11"
+dynamic = ["dependencies"]
+
+[project.optional-dependencies]
+bigquery = ["google-cloud-bigquery>=3.25,<4"]
+dev = ["duckdb>=1.1,<2", "ruff>=0.9,<1", "sqlglot>=26,<40"]
+
+[tool.ruff.lint]
+select = ["E9", "F63", "F7", "F82"]
+
+[tool.ruff.lint.per-file-ignores]
+# Databricks injects display at notebook runtime; all other files check undefined names.
+"databricks/*.py" = ["F821"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

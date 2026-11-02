@@ -1,0 +1,9 @@
+device_category,stage,stage_order,sessions,unique_users,conversion_from_entry,conversion_from_previous,abandoned_sessions,abandonment_rate
+desktop,view_item,1,2,2,1.0,,,
+desktop,add_to_cart,2,2,2,1.0,1.0,0.0,0.0
+desktop,begin_checkout,3,1,1,0.5,0.5,1.0,0.5
+desktop,purchase,4,1,1,0.5,1.0,0.0,0.0
+mobile,view_item,1,2,2,1.0,,,
+mobile,add_to_cart,2,2,2,1.0,1.0,0.0,0.0
+mobile,begin_checkout,3,1,1,0.5,0.5,1.0,0.5
+mobile,purchase,4,1,1,0.5,1.0,0.0,0.0

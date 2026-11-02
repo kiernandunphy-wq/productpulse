@@ -1,0 +1,6 @@
+user_pseudo_id,ga_session_id,device_category,view_item,add_to_cart,begin_checkout,purchase
+a,1,desktop,1,1,1,1
+a,2,mobile,1,1,1,1
+b,1,mobile,1,1,0,0
+c,3,desktop,1,1,0,0
+c,4,desktop,0,0,0,0

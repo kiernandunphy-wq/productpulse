@@ -1,0 +1,99 @@
+﻿file,field,rows,csv_inferred_dtype,logical_type_or_observation,blank_values,table_primary_key
+context_sessions.csv,user_pseudo_id,33219,float64,Text (never floating point),0,"(user_pseudo_id, ga_session_id)"
+context_sessions.csv,ga_session_id,33219,int64,Text (never floating point),0,"(user_pseudo_id, ga_session_id)"
+context_sessions.csv,device_category,33219,object,object,0,"(user_pseudo_id, ga_session_id)"
+context_sessions.csv,view_item,33219,int64,int64,0,"(user_pseudo_id, ga_session_id)"
+context_sessions.csv,add_to_cart,33219,int64,int64,0,"(user_pseudo_id, ga_session_id)"
+context_sessions.csv,begin_checkout,33219,int64,int64,0,"(user_pseudo_id, ga_session_id)"
+context_sessions.csv,purchase,33219,int64,int64,0,"(user_pseudo_id, ga_session_id)"
+context_sessions.csv,entry_date,33219,object,Date,0,"(user_pseudo_id, ga_session_id)"
+context_sessions.csv,first_date,33219,object,Date,0,"(user_pseudo_id, ga_session_id)"
+context_sessions.csv,last_date,33219,object,Date,0,"(user_pseudo_id, ga_session_id)"
+context_sessions.csv,observed_dates,33219,int64,int64,0,"(user_pseudo_id, ga_session_id)"
+context_sessions.csv,left_context_edge,33219,bool,True/False,0,"(user_pseudo_id, ga_session_id)"
+context_sessions.csv,right_context_edge,33219,bool,True/False,0,"(user_pseudo_id, ga_session_id)"
+context_sessions.csv,potentially_incomplete,33219,bool,True/False,0,"(user_pseudo_id, ga_session_id)"
+context_sessions.csv,crosses_calendar_date,33219,bool,True/False,0,"(user_pseudo_id, ga_session_id)"
+daily_funnel.csv,entry_date,28,object,Date,0,"(entry_date, stage_order)"
+daily_funnel.csv,stage,28,object,object,0,"(entry_date, stage_order)"
+daily_funnel.csv,stage_order,28,int64,int64,0,"(entry_date, stage_order)"
+daily_funnel.csv,sessions,28,int64,int64,0,"(entry_date, stage_order)"
+daily_funnel.csv,unique_users,28,int64,int64,0,"(entry_date, stage_order)"
+daily_funnel.csv,conversion_from_entry,28,float64,float64,0,"(entry_date, stage_order)"
+daily_funnel.csv,conversion_from_previous,28,float64,float64,7,"(entry_date, stage_order)"
+daily_funnel.csv,abandoned_sessions,28,float64,float64,7,"(entry_date, stage_order)"
+daily_funnel.csv,abandonment_rate,28,float64,float64,7,"(entry_date, stage_order)"
+daily_kpis.csv,event_date,7,object,object,0,event_date
+daily_kpis.csv,events,7,int64,int64,0,event_date
+daily_kpis.csv,active_users,7,int64,int64,0,event_date
+daily_kpis.csv,active_sessions,7,int64,int64,0,event_date
+daily_kpis.csv,entry_sessions,7,int64,int64,0,event_date
+daily_kpis.csv,missing_source_events,7,int64,int64,0,event_date
+daily_kpis.csv,missing_source_rate,7,float64,float64,0,event_date
+daily_kpis.csv,missing_medium_events,7,int64,int64,0,event_date
+daily_kpis.csv,missing_medium_rate,7,float64,float64,0,event_date
+daily_summary.csv,event_date,7,object,object,0,event_date
+daily_summary.csv,events,7,int64,int64,0,event_date
+daily_summary.csv,active_users,7,int64,int64,0,event_date
+daily_summary.csv,active_sessions,7,int64,int64,0,event_date
+daily_summary.csv,entry_sessions,7,int64,int64,0,event_date
+daily_summary.csv,missing_source_events,7,int64,int64,0,event_date
+daily_summary.csv,missing_source_rate,7,float64,float64,0,event_date
+daily_summary.csv,missing_medium_events,7,int64,int64,0,event_date
+daily_summary.csv,missing_medium_rate,7,float64,float64,0,event_date
+daily_summary.csv,view_item_sessions,7,int64,int64,0,event_date
+daily_summary.csv,add_to_cart_sessions,7,int64,int64,0,event_date
+daily_summary.csv,begin_checkout_sessions,7,int64,int64,0,event_date
+daily_summary.csv,purchase_sessions,7,int64,int64,0,event_date
+daily_summary.csv,ordered_conversion,7,float64,float64,0,event_date
+device_funnel.csv,device_category,12,object,object,0,"(device_category, stage_order)"
+device_funnel.csv,stage,12,object,object,0,"(device_category, stage_order)"
+device_funnel.csv,stage_order,12,int64,int64,0,"(device_category, stage_order)"
+device_funnel.csv,sessions,12,int64,int64,0,"(device_category, stage_order)"
+device_funnel.csv,unique_users,12,int64,int64,0,"(device_category, stage_order)"
+device_funnel.csv,conversion_from_entry,12,float64,float64,0,"(device_category, stage_order)"
+device_funnel.csv,conversion_from_previous,12,float64,float64,3,"(device_category, stage_order)"
+device_funnel.csv,abandoned_sessions,12,float64,float64,3,"(device_category, stage_order)"
+device_funnel.csv,abandonment_rate,12,float64,float64,3,"(device_category, stage_order)"
+duckdb_funnel.csv,scope,16,object,object,0,"(scope, device_category, stage_order); device null for ALL"
+duckdb_funnel.csv,device_category,16,object,object,4,"(scope, device_category, stage_order); device null for ALL"
+duckdb_funnel.csv,stage_order,16,int64,int64,0,"(scope, device_category, stage_order); device null for ALL"
+duckdb_funnel.csv,stage,16,object,object,0,"(scope, device_category, stage_order); device null for ALL"
+duckdb_funnel.csv,sessions,16,float64,float64,0,"(scope, device_category, stage_order); device null for ALL"
+duckdb_funnel.csv,conversion_from_entry,16,float64,float64,0,"(scope, device_category, stage_order); device null for ALL"
+duckdb_funnel.csv,conversion_from_previous,16,float64,float64,4,"(scope, device_category, stage_order); device null for ALL"
+duckdb_funnel.csv,abandoned_sessions,16,float64,float64,4,"(scope, device_category, stage_order); device null for ALL"
+duckdb_funnel.csv,abandonment_rate,16,float64,float64,4,"(scope, device_category, stage_order); device null for ALL"
+events.csv,event_date,245209,int64,Text YYYYMMDD,0,No guaranteed event primary key; projected duplicates retained (observed zero).
+events.csv,event_timestamp,245209,int64,Whole number (64-bit microseconds),0,No guaranteed event primary key; projected duplicates retained (observed zero).
+events.csv,event_name,245209,object,object,0,No guaranteed event primary key; projected duplicates retained (observed zero).
+events.csv,user_pseudo_id,245209,float64,Text (never floating point),0,No guaranteed event primary key; projected duplicates retained (observed zero).
+events.csv,ga_session_id,245209,int64,Text (never floating point),0,No guaranteed event primary key; projected duplicates retained (observed zero).
+events.csv,source,245209,object,object,0,No guaranteed event primary key; projected duplicates retained (observed zero).
+events.csv,medium,245209,object,object,0,No guaranteed event primary key; projected duplicates retained (observed zero).
+events.csv,device_category,245209,object,object,0,No guaranteed event primary key; projected duplicates retained (observed zero).
+extracted_dates.csv,event_date,9,object,object,0,event_date
+extracted_dates.csv,events,9,int64,int64,0,event_date
+ordered_funnel.csv,stage,4,object,object,0,stage_order
+ordered_funnel.csv,stage_order,4,int64,int64,0,stage_order
+ordered_funnel.csv,sessions,4,int64,int64,0,stage_order
+ordered_funnel.csv,unique_users,4,int64,int64,0,stage_order
+ordered_funnel.csv,conversion_from_entry,4,float64,float64,0,stage_order
+ordered_funnel.csv,conversion_from_previous,4,float64,float64,1,stage_order
+ordered_funnel.csv,abandoned_sessions,4,float64,float64,1,stage_order
+ordered_funnel.csv,abandonment_rate,4,float64,float64,1,stage_order
+sessions.csv,user_pseudo_id,26328,float64,Text (never floating point),0,"(user_pseudo_id, ga_session_id)"
+sessions.csv,ga_session_id,26328,int64,Text (never floating point),0,"(user_pseudo_id, ga_session_id)"
+sessions.csv,device_category,26328,object,object,0,"(user_pseudo_id, ga_session_id)"
+sessions.csv,view_item,26328,int64,int64,0,"(user_pseudo_id, ga_session_id)"
+sessions.csv,add_to_cart,26328,int64,int64,0,"(user_pseudo_id, ga_session_id)"
+sessions.csv,begin_checkout,26328,int64,int64,0,"(user_pseudo_id, ga_session_id)"
+sessions.csv,purchase,26328,int64,int64,0,"(user_pseudo_id, ga_session_id)"
+sessions.csv,entry_date,26328,object,Date,0,"(user_pseudo_id, ga_session_id)"
+sessions.csv,first_date,26328,object,Date,0,"(user_pseudo_id, ga_session_id)"
+sessions.csv,last_date,26328,object,Date,0,"(user_pseudo_id, ga_session_id)"
+sessions.csv,observed_dates,26328,int64,int64,0,"(user_pseudo_id, ga_session_id)"
+sessions.csv,left_context_edge,26328,bool,True/False,0,"(user_pseudo_id, ga_session_id)"
+sessions.csv,right_context_edge,26328,bool,True/False,0,"(user_pseudo_id, ga_session_id)"
+sessions.csv,potentially_incomplete,26328,bool,True/False,0,"(user_pseudo_id, ga_session_id)"
+sessions.csv,crosses_calendar_date,26328,bool,True/False,0,"(user_pseudo_id, ga_session_id)"

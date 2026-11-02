@@ -1,0 +1,3 @@
+device_category,sessions,purchasers,ordered_purchases,purchase_session_rate
+desktop,2,2,2,1.0
+mobile,2,1,0,0.5

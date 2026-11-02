@@ -1,0 +1,5 @@
+event_name,event_count,unique_users
+add_to_cart,5,3
+begin_checkout,5,4
+purchase,5,4
+view_item,6,4

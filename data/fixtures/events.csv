@@ -1,0 +1,17 @@
+event_date,event_timestamp,event_name,user_pseudo_id,ga_session_id,source,medium,device_category
+20201101,1604188800000000,page_view,u1,1,google,organic,desktop
+20201101,1604188801000000,view_item,u1,1,google,organic,desktop
+20201101,1604188802000000,add_to_cart,u1,1,google,organic,desktop
+20201101,1604188803000000,purchase,u1,1,google,organic,desktop
+20201101,1604188800000000,page_view,u2,1,direct,none,mobile
+20201101,1604188801000000,view_item,u2,1,direct,none,mobile
+20201101,1604188800000000,add_to_cart,u3,2,google,organic,mobile
+20201101,1604188801000000,page_view,u3,2,google,organic,mobile
+20201101,1604188802000000,view_item,u3,2,google,organic,mobile
+20201101,1604188803000000,purchase,u3,2,google,organic,mobile
+20201201,1606780800000000,page_view,u1,3,google,organic,desktop
+20201201,1606780801000000,view_item,u1,3,google,organic,desktop
+20201201,1606780802000000,add_to_cart,u1,3,google,organic,desktop
+20201201,1606780803000000,purchase,u1,3,google,organic,desktop
+20201201,1606780800000000,page_view,,4,<Other>,,mobile
+20201201,1606780800000000,page_view,u4,,,email,desktop

@@ -1,0 +1,16 @@
+{
+  "dataset_label": "fixture",
+  "input_sha256": "1e002b921d9c408e09343663a26cb6e7bd3561050352139a001f0493d83c8ddb",
+  "quality": {
+    "input_rows": 16,
+    "missing_user_rows": 1,
+    "missing_session_rows": 1,
+    "exact_duplicate_rows": 0,
+    "excluded_session_rows": 2
+  },
+  "eligible_sessions": 4,
+  "date_min": "2020-11-01 00:00:00",
+  "date_max": "2020-12-01 00:00:00",
+  "funnel_policy": "strict timestamps, ordered within user/session; tied timestamps do not advance",
+  "pandas_version": "2.3.3"
+}

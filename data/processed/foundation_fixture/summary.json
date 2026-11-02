@@ -1,0 +1,27 @@
+{
+  "label": "fixture",
+  "input_sha256": "e74ece8e82a4c5a567dacdddd7129204489f0519846cabd380815f9c823dc24c",
+  "quality": {
+    "input_rows": 21,
+    "missing_user_rows": 1,
+    "missing_session_rows": 3,
+    "exact_duplicate_rows": 1,
+    "excluded_session_rows": 4
+  },
+  "kpis": {
+    "unique_users": 4,
+    "event_count": 21,
+    "eligible_sessions": 5,
+    "product_viewers": 4,
+    "add_to_cart_users": 3,
+    "checkout_starters": 4,
+    "purchasers": 4,
+    "ordered_session_conversion": 0.5
+  },
+  "date_min": "2021-01-01",
+  "date_max": "2021-01-01",
+  "missing_expected_events": [],
+  "definition": "view_item > add_to_cart > begin_checkout > purchase, strictly increasing timestamps within user/session",
+  "unordered_kpis": "distinct non-null pseudonyms per event; not sequential; includes missing-session users",
+  "device_policy": "earliest session event; lexicographic device on timestamp ties"
+}

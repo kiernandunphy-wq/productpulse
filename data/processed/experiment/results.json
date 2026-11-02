@@ -1,0 +1,19 @@
+{
+  "label": "SIMULATED ONLY",
+  "n": 20000,
+  "control_rate": 0.0721473133427249,
+  "treatment_rate": 0.08109719737626714,
+  "absolute_difference": 0.008949884033542244,
+  "ci95_newcombe": [
+    0.0015750751417856444,
+    0.016327864869957274
+  ],
+  "z": 2.3787828927791765,
+  "p_two_sided": 0.017369903032841406,
+  "adjusted_treatment_odds_ratio": 1.136335561670905,
+  "adjusted_or_ci95": [
+    1.023630384459906,
+    1.2614499611588148
+  ],
+  "planned_n_per_arm_8_to_9_5_percent": 5560.820463179942
+}

@@ -1,0 +1,7 @@
+{
+  "name": "ProductPulse Accessible Base",
+  "dataColors": ["#005A9C", "#006B5E", "#A64500", "#6B4C9A", "#455A64"],
+  "background": "#FFFFFF",
+  "foreground": "#172B4D",
+  "tableAccent": "#005A9C"
+}

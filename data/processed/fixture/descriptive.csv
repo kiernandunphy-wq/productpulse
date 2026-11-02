@@ -1,0 +1,9 @@
+statistic,events
+count,4.0
+mean,3.5
+std,1.0
+min,2.0
+25%,3.5
+50%,4.0
+75%,4.0
+max,4.0

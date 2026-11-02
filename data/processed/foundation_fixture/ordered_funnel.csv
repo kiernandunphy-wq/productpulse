@@ -1,0 +1,5 @@
+stage,stage_order,sessions,unique_users,conversion_from_entry,conversion_from_previous,abandoned_sessions,abandonment_rate
+view_item,1,4,3,1.0,,,
+add_to_cart,2,4,3,1.0,1.0,0.0,0.0
+begin_checkout,3,2,1,0.5,0.5,2.0,0.5
+purchase,4,2,1,0.5,1.0,0.0,0.0

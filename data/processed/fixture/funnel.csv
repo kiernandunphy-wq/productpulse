@@ -1,0 +1,5 @@
+stage,stage_order,sessions,rate_from_entry,rate_from_previous
+page_view,1,4,1.0,1.0
+view_item,2,4,1.0,1.0
+add_to_cart,3,2,0.5,0.5
+purchase,4,2,0.5,1.0
